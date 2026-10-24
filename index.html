@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student and Mentor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container" id="loginPage">
+        <h1>Institute Portal</h1>
+        <p>Login to continue</p>
+
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button type="submit">Login</button>
+            <p id="loginMessage" aria-live="polite"></p>
+        </form>
+
+        <p class="hint">
+            Demo Student: student@example.com<br>
+            Demo Mentor: mentor@example.com<br>
+            Password for both: demo123
+        </p>
+    </div>
+
+    <div class="dashboard hidden" id="dashboardPage">
+        <header>
+            <h1 id="dashboardTitle">Dashboard</h1>
+            <button id="logoutButton">Logout</button>
+        </header>
+
+        <p id="welcomeMessage"></p>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="summary-card completed-summary">
+                <h3>Completed Tasks</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="summary-card pending-summary">
+                <h3>Pending Tasks</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+        </section>
+
+        <h2>Task List</h2>
+        <section id="taskList" class="task-list"></section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
